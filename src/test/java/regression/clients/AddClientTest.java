@@ -4,6 +4,7 @@ package regression.clients;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.Login;
 import pages.Menu;
@@ -37,24 +38,27 @@ public class AddClientTest {
 
         AddClient addClient = new AddClient(driver);
 
-        addClient.setLanguage("Thai");
-        addClient.setCountry("Nepal");
-        addClient.setGender("Female");
-        addClient.setDate("24/04/2020");
-        /*addClient.enterClientName("John");
+        addClient.enterClientName("John");
         addClient.enterClientSurname("Doe");
+        addClient.setLanguage("Thai");
         addClient.enterStreetAddress1("123 Main St");
         addClient.enterStreetAddress2("Apt 101");
         addClient.enterCity("Anytown");
         addClient.enterState("CA");
         addClient.enterZipCode("12345");
+        addClient.setCountry("Nepal");
+        addClient.setGender("Female");
+        addClient.setDate("24/04/2020");
         addClient.enterPhoneNumber("123-456-7890");
         addClient.enterFaxNumber("123-456-7891");
         addClient.enterMobileNumber("987-654-3210");
         addClient.enterEmailAddress("john.doe@example.com");
         addClient.enterWebAddress("http://www.example.com");
         addClient.enterVATID("VAT123");
-        addClient.enterTaxesCode("TC456");*/
+        addClient.enterTaxesCode("TC456");
+        addClient.clickBtnSave();
     }
+
+
 
 }

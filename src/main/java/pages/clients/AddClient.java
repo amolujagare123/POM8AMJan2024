@@ -63,6 +63,14 @@ public class AddClient {
         driver.findElement(By.xpath("//li[normalize-space()='"+gender+"']")).click();
     }
 
+    @FindBy (xpath = "//button[@id='btn-submit']")
+    WebElement btnSave;
+
+    public void clickBtnSave()
+    {
+        btnSave.click();
+    }
+
     @FindBy (xpath = "//input[@id='client_birthdate']")
     WebElement birthdate;
 

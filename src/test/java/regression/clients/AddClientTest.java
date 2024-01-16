@@ -9,13 +9,14 @@ import org.testng.annotations.Test;
 import pages.Login;
 import pages.Menu;
 import pages.clients.AddClient;
+import util.DoLogin;
 
 import java.io.IOException;
 
 import static util.ConfigReader.*;
 
-public class AddClientTest {
-    WebDriver driver;
+public class AddClientTest extends DoLogin {
+    /*   WebDriver driver;
 
     @BeforeClass
     public void doLogin() throws IOException {
@@ -28,7 +29,7 @@ public class AddClientTest {
         login.setTxtPassword(getPassword());
         login.clickLogin();
 
-    }
+    }*/
 
     @Test
     public void addClientTest()

@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import pages.Login;
 import pages.Menu;
 import pages.clients.AddClient;
+import util.DoLogin;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -18,8 +19,8 @@ import java.time.Duration;
 import static util.ConfigReader.*;
 import static util.ForDataProvider.getMyData;
 
-public class AddClientDataProviderTest {
-    WebDriver driver;
+public class AddClientDataProviderTest  extends DoLogin {
+ /*   WebDriver driver;
 
     @BeforeClass
     public void doLogin() throws IOException {
@@ -32,7 +33,7 @@ public class AddClientDataProviderTest {
         login.setTxtPassword(getPassword());
         login.clickLogin();
 
-    }
+    }*/
 
     @Test (dataProvider = "getData")
     public void addClientTest(String name, String surname, String language, String address1, String address2,

@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import pages.Login;
 import pages.Menu;
 import pages.clients.AddClient;
+import util.DoLogin;
 
 import java.io.IOException;
 import java.sql.*;
@@ -22,7 +23,8 @@ import static util.ConfigReader.*;
 import static util.Conversion.*;
 import static util.ForDataProvider.getMyData;
 
-public class AddClientDataTest {
+public class AddClientDataTest extends DoLogin {
+/*
     WebDriver driver;
 
     @BeforeClass
@@ -37,6 +39,7 @@ public class AddClientDataTest {
         login.clickLogin();
 
     }
+*/
 
     @Test (dataProvider = "getData")
     public void addClientTest(String name, String surname, String language, String address1, String address2,
